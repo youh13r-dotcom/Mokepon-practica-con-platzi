@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Frijole&family=Honk&family=Oi&display=swap');
+
+body{
+  font-family: "Coiny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  
+  background-color: #213C51;
+
+  background-image: url(./assets/fondo\ mpt.png);
+  background-attachment: fixed;
+}
+
+.secPrecentacion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  color: #DDAED3;
+}
+
+#contPrecentacion{
+  background-color: #6594B1;
+  width: 1000px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 15px solid #DDAED3;
+  border-top-right-radius: 160px;
+  border-bottom-left-radius: 160px;
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+
+.parrafosP{
+  background-color: #213C51;
+  margin-bottom: 0px;
+  padding: 20px;
+  border: 5px solid #DDAED3;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.botonPrecentacion{
+  background-color: #6594B1;
+  width: 180px;
+  height: 60px;
+  border-radius: 20px;
+  border-color: #DDAED3;
+  margin: 30px;
+  border-width: 5px;
+  border-style: solid;
+  font-family: "Coiny", system-ui;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.seleccionar_mascota{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.titulo {
+  color: #DDAED3;
+  width: 444px;
+  height: 82px;
+  background-color: #6594B1;
+  border: 5px solid;
+  border-radius: 20px;
+  font-size: 61px;;
+}
+
+.subtitulo{
+  color: #DDAED3;
+  font-size: 30px;
+}
+
+.targetasMokepon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  color: black;
+}
+
+label{
+  display: flex;
+  background-color: #6594B1;
+  width: 255px;
+  height: 180px;
+  padding: 12px;
+  box-sizing: border-box;
+  margin-right: 20px;
+  border: 5px solid #DDAED3;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.imagen-mascota{
+  width: 150px;
+}
+
+input{
+  display: none;
+}
+
+.oculto{
+  display: none !important;  
+}
+
+#boton-mascota{
+  background-color: #6594B1;
+  width: 180px;
+  height: 60px;
+  border-radius: 20px;
+  border-color: #DDAED3;
+  margin: 30px;
+  border-width: 5px;
+  border-style: solid;
+  font-family: "Coiny", system-ui;
+  font-style: normal;
+  font-size: 20px;
+}
+
+#verMapa{
+  flex-direction: column;
+  align-items: center;
+}
+
+#mapa{
+  border: 5px solid #DDAED3;
+  border-radius: 20px;
+  /* el canvas se escala sin tocar sus coordenadas internas (1200x800) */
+  max-width: 100%;
+  height: auto;
+}
+
+#controles-movimiento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+ margin-top: 20px;
+}
+
+.controles-laterales {
+  display: flex;
+  gap: 10px;
+}
+
+#controles-movimiento button {
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  background-color: #6594B1;
+  border: 3px solid #DDAED3;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  /* evita el zoom por doble toque al moverse en el celular */
+  touch-action: manipulation;
+}
+
+#controles-movimiento button:active {
+  background-color: #DDAED3;
+}
+
+.seccion-ataque{
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtitulo2{
+  font-size: 30px;
+  color: #DDAED3;
+}
+
+#boton-fuego{
+  background-color: #6594B1;
+  width: 75px;
+  height: 75px;
+  border-radius: 40px;
+  border-color: #FF8C00;
+  margin: 10px;
+  border-width: 5px;
+  border-style: solid;
+  font-family: "Coiny", system-ui;
+  font-style: normal;
+  font-size: 40px;
+}
+
+#boton-agua{
+  background-color: #6594B1;
+  width: 75px;
+  height: 75px;
+  border-radius: 40px;
+  border-color: #9CD5FF;
+  margin: 10px;
+  border-width: 5px;
+  border-style: solid;
+  font-family: "Coiny", system-ui;
+  font-style: normal;
+  font-size: 40px;
+}
+
+#boton-tierra{
+  background-color: #6594B1;
+  width: 75px;
+  height: 75px;
+  border-radius: 40px;
+  border-color: #BBCB2E;
+  margin: 10px;
+  border-width: 5px;
+  border-style: solid;
+  font-family: "Coiny", system-ui;
+  font-style: normal;
+  font-size: 40px;
+}
+
+#vidas{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color:#6594B1;
+  width: 840px;
+  height: 100px;
+  padding: 20px;
+  justify-content: flex-start;
+  border: 5px solid #DDAED3;
+  border-radius: 20px;
+}
+
+#vidas-jugador{
+  font-size: 25px;
+  color: #DDAED3;
+}
+
+#vidas-enemigo{
+  font-size: 25px;
+  color: #DDAED3;
+}
+
+.mensajesMid{
+  color: #DDAED3;
+  font-size: 35px;
+}
+
+/* los resultados de cada ataque van en una cajita, solo cuando ya hay mensajes */
+#mensajesR:not(:empty){
+  background-color: #6594B1;
+  border: 5px solid #DDAED3;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#texto-del-jugador{
+  margin-right: 83px;
+}
+
+.mascota-dinamica{
+  width: 110px;
+}
+
+.mascota-dinamica-enm{
+width: 110px;
+
+}
+
+#ataques{
+  width: 700px;
+  font-size: 20px;
+  display: flex;
+  background-color: #6594B1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  border: 5px solid #DDAED3;
+  border-radius: 20px;
+}
+
+#boton-reiniciar{
+  background-color: #6594B1;
+  width: 180px;
+  height: 60px;
+  border-radius: 20px;
+  border-color: #DDAED3;
+  margin: 30px;
+  border-width: 5px;
+  border-style: solid;
+  font-family: "Coiny", system-ui;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.seleccionado{
+  border: solid black; 
+  background-color: #BBE0EF;
+}
+
+/* ================== responsive ================== */
+/* el diseño de escritorio no se toca, solo se adapta en pantallas mas chicas */
+
+/* pantallas medianas y tablets: los bloques de ancho fijo se vuelven flexibles */
+@media (max-width: 1100px){
+  #contPrecentacion{
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  #vidas{
+    width: 100%;
+    max-width: 840px;
+    height: auto;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  #ataques{
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+  }
+}
+
+/* tarjetas de seleccion de mokepon
+   las 4 tarjetas en fila necesitan 1100px, debajo de eso pasan a 2x2 */
+@media (max-width: 1150px){
+  .seleccionar_mascota{
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .targetasMokepon{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    max-width: 550px;
+    /* el align-items center de la regla base dejaba las tarjetas escalonadas */
+    align-items: stretch;
+  }
+
+  label{
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  /* sin esto el nombre y la imagen no se encogen y se salen de la tarjeta */
+  label p{
+    margin: 0;
+    min-width: 0;
+  }
+
+  .imagen-mascota{
+    width: 100%;
+    max-width: 150px;
+    min-width: 0;
+  }
+}
+
+/* celulares */
+@media (max-width: 768px){
+  body{
+    /* fixed da problemas de rendimiento y saltos en moviles */
+    background-attachment: scroll;
+  }
+
+  .secPrecentacion{
+    font-size: 18px;
+  }
+
+  .titulo{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    font-size: 34px;
+    padding: 8px 14px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .subtitulo,
+  .subtitulo2{
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #contPrecentacion{
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .parrafosP{
+    padding: 12px;
+  }
+
+  .botonPrecentacion,
+  #boton-mascota,
+  #boton-reiniciar{
+    width: 160px;
+    height: 55px;
+    margin: 18px;
+  }
+
+  #controles-movimiento button{
+    width: 70px;
+    height: 70px;
+  }
+
+  .mensajesMid{
+    font-size: 22px;
+    text-align: center;
+  }
+
+  #texto-del-jugador{
+    margin-right: 0;
+  }
+
+  #vidas{
+    text-align: center;
+  }
+
+  .mascota-dinamica,
+  .mascota-dinamica-enm{
+    width: 80px;
+  }
+
+  #contenedorAtaques{
+    text-align: center;
+  }
+
+  #boton-fuego,
+  #boton-agua,
+  #boton-tierra{
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
+    margin: 6px;
+  }
+
+  #ataques{
+    font-size: 16px;
+    padding: 15px;
+    margin: 10px;
+    gap: 10px;
+  }
+}
+
+/* celulares chicos */
+@media (max-width: 480px){
+  .secPrecentacion{
+    font-size: 15px;
+  }
+
+  .titulo{
+    font-size: 26px;
+  }
+
+  .subtitulo,
+  .subtitulo2{
+    font-size: 17px;
+  }
+
+  #contPrecentacion{
+    border-width: 8px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .parrafosP{
+    padding: 8px;
+    border-width: 3px;
+  }
+
+  /* en pantallas muy angostas el nombre y la imagen no caben lado a lado */
+  label{
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  label p{
+    font-size: 14px;
+  }
+
+  .imagen-mascota{
+    max-width: 120px;
+  }
+
+  #ataques{
+    flex-direction: column;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  #boton-fuego,
+  #boton-agua,
+  #boton-tierra{
+    width: 56px;
+    height: 56px;
+    font-size: 28px;
+    margin: 4px;
+  }
+
+  .mascota-dinamica,
+  .mascota-dinamica-enm{
+    width: 64px;
+  }
+
+  #controles-movimiento button{
+    width: 64px;
+    height: 64px;
+  }
+}

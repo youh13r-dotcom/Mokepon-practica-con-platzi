@@ -1,0 +1,32 @@
+# dependencias
+node_modules/
+.npm/
+
+# logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# variables de entorno y configuracion local
+.env
+.env.*
+.claude
+.claude/settings.local.json
+
+# archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# configuracion de editores
+.vscode/
+.idea/
+*.swp
+
+# temporales y cache
+tmp/
+temp/
+.cache/
+*.tmp
