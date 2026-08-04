@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>MOKEPON!</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+
+        <section class="secPrecentacion" id="precentacion">
+            <h1 class="titulo">⚔️Mokepon⚔️</h1>
+            <div id="contPrecentacion">
+                <h2>COMO JUGAR</h2>
+                <p class="parrafosP" >Para comenzar elige tu Mokepon y dale en seleccionar</p>
+                <p class="parrafosP" >Muevete por el mapa y reta a los Mokepones que estan hay</p>
+                <p class="parrafosP" >cuando te cruzes con un Mokepon enemigo iniciara un duelo...</p>
+                <p class="parrafosP" >Elige la secuencia de ataques que vas a usar cada Mokepon tiene sus propios ataques</p>
+                <p class="parrafosP" >Rcuerda: agua💧gana a fuego, fuego🔥a tierra y tierra🌱a agua</p>
+                <p>Preciona enter para jugar</p>
+            </div>
+            <button class="botonPrecentacion" onclick="botonJugar()">jugar</button>
+        </section>
+
+        <section class="oculto" id="seleccionar-mascota">
+
+            <h1 class="titulo">⚔️Mokepon⚔️</h1>
+
+            <h2 class="subtitulo">Elige tu mascota:</h2>
+
+            <div id="contenedorMokepones" class="targetasMokepon">
+
+            </div>
+            <button id="boton-mascota">Seleccionar</button>
+        
+        </section>
+
+        <section id="verMapa">
+            <h1 class="titulo">⚔️Mokepon⚔️</h1>
+
+            <h2 class="subtitulo">wasd  0  ↑←↓→ para moverte</h2>
+            <canvas id="mapa" width="1200" height="800"></canvas>
+            <div id="controles-movimiento">
+                <button 
+                    onmousedown="moverpersonajeArriba()" 
+                    onmouseup="detenetMovimiento()" 
+                    ontouchstart="moverpersonajeArriba()" 
+                    ontouchend="detenetMovimiento()"
+                >⬆️</button>
+                
+                <div class="controles-laterales">
+                    <button 
+                        onmousedown="moverpersonajeIsquierda()" 
+                        onmouseup="detenetMovimiento()" 
+                        ontouchstart="moverpersonajeIsquierda()" 
+                        ontouchend="detenetMovimiento()"
+                    >⬅️</button>
+                    
+                    <button 
+                        onmousedown="moverpersonajeAbajo()" 
+                        onmouseup="detenetMovimiento()" 
+                        ontouchstart="moverpersonajeAbajo()" 
+                        ontouchend="detenetMovimiento()"
+                    >⬇️</button>
+                    
+                    <button 
+                        onmousedown="moverpersonajeDerecha()" 
+                        onmouseup="detenetMovimiento()" 
+                        ontouchstart="moverpersonajeDerecha()" 
+                        ontouchend="detenetMovimiento()"
+                    >➡️</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="seccion-ataque" id="seleccionar-ataque">
+
+            <h1 class="titulo">⚔️Mokepon⚔️</h1>
+
+            <h2 class="subtitulo2">Elige tu ataque:</h2>
+
+            <div id="contenedorAtaques"></div>
+           
+
+            <section id="vidas">
+
+                <div id="contenedorMascDinJ">
+
+                </div>
+                <p id="texto-del-jugador">Tu <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">0</span> victorias</p>
+
+                <p>El <span id="mascota-enemigo"></span> Enemigo tiene <span id="vidas-enemigo">0</span> victorias</p>
+                <div id="contenedorDeME">
+                    
+                </div>
+
+            </section>
+
+            <section class="mensajesMid" id="mensajesR"></section>
+            <section class="mensajesMid" id="mensajesF"></section>
+
+            <section id="ataques">
+
+            <section id="mensajesJ">Ataques del jugador</section>
+            <section id="mensajesE">Ataques del enemigo</section>
+            </section>
+            
+            <section id="reiniciar">
+                <button id="boton-reiniciar">Reiniciar</button>
+            </section>
+        </section>
+
+    <script src="./mokepon.js"></script>
+    </body>
+</html>
