@@ -23,9 +23,3 @@ node index.js
 ```
 
 El servidor estará disponible en `http://localhost:3000`
-
-## Características
-
-## Contribuciones
-
-## Licencia
